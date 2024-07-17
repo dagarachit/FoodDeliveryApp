@@ -114,9 +114,6 @@ public class RestaurantService {
 		// Restaurant being created by ADMIN, adding owner_id.
 		Optional<User> user = userRepository.findById(createRestaurantRequestDTO.getUserId());
 		if (user.isEmpty()) {
-			RegisterDto registerDto = new RegisterDto();
-			
-			authService.register(registerDto);
 			throw new FoodDeliveryException("User Not Found for userId : " + createRestaurantRequestDTO.getUserId());
 		} else {
 			restaurant.setUser(user.get());
