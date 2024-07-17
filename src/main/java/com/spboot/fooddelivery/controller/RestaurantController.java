@@ -91,16 +91,4 @@ public class RestaurantController {
 		return restaurantService.markStatusChange(orderId,restaurantId,orderStatus);
 	}
 
-	
-	// Testing Purpose
-	@GetMapping("/elastic")
-	public List<RestaurantIndex> getAllRestElastic(){
-		return restaurantService.getAllRestElastic();
-	}
-	
-//	@GetMapping("/")
-//	public List<Restaurant> getAllRestaurant() {
-//		return restaurantService.getAllRestaurant();
-//	}
-
 }

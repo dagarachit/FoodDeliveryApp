@@ -349,8 +349,4 @@ public class RestaurantService {
 
 	}
 
-	public List<RestaurantIndex> getAllRestElastic() {
-		return ((PageImpl<RestaurantIndex>) restaurantElasticRepository.findAll()).getContent();
-	}
-
 }
